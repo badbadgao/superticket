@@ -4,9 +4,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from './components/Buttons/RaisedButton';
 
 const App = () => (
-    <MuiThemeProvider>
-        <RaisedButton />
-    </MuiThemeProvider>
+  <MuiThemeProvider>
+    <RaisedButton />
+  </MuiThemeProvider>
 );
 
 export default App;
