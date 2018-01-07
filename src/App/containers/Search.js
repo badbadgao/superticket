@@ -1,27 +1,36 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { bindActionCreators } from 'redux';
+import { RaisedButton } from 'material-ui';
 import PropTypes from 'prop-types';
 
-const Search = props => {
-  console.log(props);
-  return (
-    <div>
-      {props.key}
-    </div>
-  );
-};
+import * as actions from '../reducers/ticketSearch/actions';
+
+
+const Search = props => (
+  <div>
+    {props.searchKey}
+    <RaisedButton label="tell me" />
+  </div>
+);
 
 Search.propTypes = {
-  key: PropTypes.string,
+  searchKey: PropTypes.string,
 };
 
 Search.defaultProps = {
-  key: 'Huawei P10',
+  searchKey: 'Huawei P10',
 };
 
 const mapStateToProps = state => ({
-  key: state,
+  searchKey: state.ticketSearch.searchKey,
 });
 
-export default connect(mapStateToProps, undefined)(Search);
+const mapDispatchToProps = dispatch => ({
+  action: bindActionCreators(
+    ...actions,
+    dispatch,
+  ),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

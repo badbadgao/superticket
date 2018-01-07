@@ -1,4 +1,4 @@
 export default {
-  key: 'apple',
+  searchKey: 'apple 1',
   result: 'Apple X',
 };

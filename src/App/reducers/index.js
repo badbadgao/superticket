@@ -1,7 +1,9 @@
-import { createStore } from 'redux';
+import { combineReducers } from 'redux';
 
 import ticketSearch from './ticketSearch/reducer';
 
-const store = createStore(ticketSearch);
+const appReducers = combineReducers({
+  ticketSearch,
+});
 
-export default store;
+export default appReducers;
