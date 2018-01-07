@@ -2,7 +2,7 @@ import React from 'react';
 import { RaisedButton } from 'material-ui';
 
 const RaisedButtonWrapper = props => (
-  <RaisedButton label="default" />
+  <RaisedButton {...props} />
 );
 
 export default RaisedButtonWrapper;
