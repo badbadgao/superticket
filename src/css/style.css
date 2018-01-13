@@ -9,3 +9,7 @@ html, body, #container {
 input {
   font-family: 'Noto Sans', sans-serif;
 }
+
+.PointerHover:hover{
+  cursor: pointer;
+}

@@ -5,8 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 
-import Search from './containers/Search';
-
+import Banner from './containers/Banner';
 import appReducers from './reducers/';
 
 const middleware = [thunk];
@@ -22,7 +21,7 @@ const store = createStore(
 const App = () => (
   <Provider store={store}>
     <MuiThemeProvider>
-      <Search />
+      <Banner />
     </MuiThemeProvider>
   </Provider>
 );
