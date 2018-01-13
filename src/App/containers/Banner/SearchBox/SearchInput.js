@@ -25,9 +25,17 @@ class SearchInput extends React.Component {
 
   render() {
     const styles = {
-      textFieldStyle: {
-        fontSize: '13px',
+      searchInput: {
+        outline: 'none',
         height: '42px',
+        paddingLeft: '14px',
+        backgroundColor: 'transparent',
+        display: 'inline-block',
+      },
+      textFieldStyle: {
+        fontSize: '15px',
+        height: '42px',
+        width: '100%',
       },
       listStyle: {
         fontSize: '15px',
@@ -35,14 +43,6 @@ class SearchInput extends React.Component {
       hintStyle: {
         lineHeight: '42px',
         bottom: '0px',
-      },
-      searchInput: {
-        width: '350px',
-        outline: 'none',
-        height: '42px',
-        paddingLeft: '14px',
-        backgroundColor: 'transparent',
-        display: 'inline-block',
       },
       menuStyle: {
         backgroundColor: '#e08a1e',

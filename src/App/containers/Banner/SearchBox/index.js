@@ -6,22 +6,28 @@ import SearchButton from './SearchButton';
 const SearchBox = props => {
   const styles = {
     container: {
-      display: 'inline-block',
+      display: 'flex',
       backgroundColor: '#fff',
       borderRadius: '2px',
+      alignItems: 'center',
+      width: '450px',
     },
     searchInput: {
-      display: 'inline-block',
+      flex: 1,
     },
     searchButton: {
-      display: 'inline-block',
+      textAlign: 'right',
     },
+  };
+
+  const onSearch = event => {
+    console.log('Search');
   };
 
   return (
     <div style={styles.container}>
       <SearchInput style={styles.searchInput} />
-      <SearchButton style={styles.searchButton} />
+      <SearchButton style={styles.searchButton} onSearch={onSearch} />
     </div>
   );
 };

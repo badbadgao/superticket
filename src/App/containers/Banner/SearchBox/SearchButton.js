@@ -1,14 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import SearchIcon from '../../../../resource/ic_search_black_24.png';
+
 const SearchButton = props => {
+  const style = {
+    margin: '0 8px',
+    height: '24px',
+  };
+
   const onSearchClick = event => {
     props.onSearch(event);
   };
 
   return (
-    <div onClick={onSearchClick} className="PointerHover" style={props.style}>
-      Search
+    <div onClick={onSearchClick} style={{ ...style, ...props.style }}>
+      <img
+        className="PointerHover"
+        alt="searchicon"
+        src={SearchIcon}
+      />
     </div>
   );
 };
