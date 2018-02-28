@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AutoComplete from 'material-ui/AutoComplete';
 import { cyan500 } from 'material-ui/styles/colors';
+import ActionHome from 'material-ui/svg-icons/action/home';
 
 class SearchInput extends React.Component {
   constructor(props) {
@@ -28,25 +29,25 @@ class SearchInput extends React.Component {
       searchInput: {
         outline: 'none',
         height: '42px',
-        paddingLeft: '14px',
         backgroundColor: 'transparent',
         display: 'inline-block',
       },
       textFieldStyle: {
         fontSize: '15px',
         height: '42px',
+        paddingLeft: '12px',
         width: '100%',
       },
       listStyle: {
-        fontSize: '15px',
+        width: '450px',
       },
       hintStyle: {
         lineHeight: '42px',
         bottom: '0px',
       },
       menuStyle: {
-        backgroundColor: '#e08a1e',
-        fontSize: '30px',
+        backgroundColor: 'transparent',
+        width: 'calc(450px)',
       },
       underlineStyle: {
         display: 'none',
@@ -67,6 +68,7 @@ class SearchInput extends React.Component {
         hintText={this.state.hintText}
         textFieldStyle={styles.textFieldStyle}
         listStyle={styles.listStyle}
+        menuStyle={styles.menuStyle}
       />
     );
   }

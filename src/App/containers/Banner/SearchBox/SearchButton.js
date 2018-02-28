@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Avatar } from 'material-ui';
 
 import SearchIcon from '../../../../resource/ic_search_black_24.png';
 
 const SearchButton = props => {
   const style = {
+    width: '32px',
     margin: '0 8px',
     height: '24px',
   };
