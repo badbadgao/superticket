@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AutoComplete from 'material-ui/AutoComplete';
-import { cyan500 } from 'material-ui/styles/colors';
-import ActionHome from 'material-ui/svg-icons/action/home';
 
 class SearchInput extends React.Component {
   constructor(props) {
@@ -47,7 +45,7 @@ class SearchInput extends React.Component {
       },
       menuStyle: {
         backgroundColor: 'transparent',
-        width: 'calc(450px)',
+        width: '450px',
       },
       underlineStyle: {
         display: 'none',
