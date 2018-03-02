@@ -3,7 +3,7 @@ import React from 'react';
 import SearchInput from './SearchInput';
 import SearchButton from './SearchButton';
 
-const SearchBox = props => {
+const SearchBox = () => {
   const styles = {
     container: {
       display: 'flex',
