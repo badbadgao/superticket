@@ -2,12 +2,13 @@ import React from 'react';
 
 import { Card, CardHeader } from 'material-ui';
 
-import CardM from '../../../components/Products/CardM';
 import Movie1 from 'resource/movie_1.jpg';
-import Movie2 from '../../../../resource/movie_2.jpg';
-import Movie3 from '../../../../resource/movie_3.jpg';
-import Movie4 from '../../../../resource/movie_4.png';
-import Movie5 from '../../../../resource/movie_5.jpg';
+import Movie2 from 'resource/movie_2.jpg';
+import Movie3 from 'resource/movie_3.jpg';
+import Movie4 from 'resource/movie_4.png';
+import Movie5 from 'resource/movie_5.jpg';
+
+import CardM from 'components/Products/CardM';
 
 const BackGroudCard = () => {
   const style = {

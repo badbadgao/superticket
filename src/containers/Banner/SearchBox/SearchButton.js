@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SearchIcon from '../../../../resource/ic_search_black_24.png';
+import SearchIcon from 'resource/ic_search_black_24.png';
 
 const SearchButton = props => {
   const style = {
