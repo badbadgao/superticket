@@ -7,7 +7,8 @@ module.exports = {
     extensions: ['*', '.js', '.jsx', '.css'],
     modules: [
       path.resolve('./src'),
-      path.resolve('./node_modules'),
+      path.resolve('./src/App/'),
+      path.resolve('./node_modules')
     ],
   },
   module: {
