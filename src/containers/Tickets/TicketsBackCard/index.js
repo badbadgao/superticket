@@ -2,13 +2,7 @@ import React from 'react';
 
 import { Card, CardHeader } from 'material-ui';
 
-import Movie1 from 'resource/movie_1.jpg';
-import Movie2 from 'resource/movie_2.jpg';
-import Movie3 from 'resource/movie_3.jpg';
-import Movie4 from 'resource/movie_4.png';
-import Movie5 from 'resource/movie_5.jpg';
-
-import CardM from 'components/Products/CardM';
+import Tickets from './Tickets';
 
 const BackGroudCard = () => {
   const style = {
@@ -41,31 +35,7 @@ const BackGroudCard = () => {
           title="Movie"
         />
         <div style={style.productsContainer}>
-          <CardM
-            img={Movie1}
-            title="观众评9.1"
-            subtitle="头号玩家"
-          />
-          <CardM
-            img={Movie2}
-            title="观众评9.1"
-            subtitle="头号玩家"
-          />
-          <CardM
-            img={Movie3}
-            title="观众评9.1"
-            subtitle="头号玩家"
-          />
-          <CardM
-            img={Movie4}
-            title="观众评9.1"
-            subtitle="头号玩家"
-          />
-          <CardM
-            img={Movie5}
-            title="观众评9.1"
-            subtitle="头号玩家"
-          />
+          <Tickets />
         </div>
       </Card>
     </div>
