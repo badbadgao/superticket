@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import CardM from 'components/Cards/CardM';
 
 const Ticket = props => (
-  <div>
+  <div style={props.style}>
     <CardM
       img={props.img}
       title={props.title}
@@ -15,8 +15,13 @@ const Ticket = props => (
 
 Ticket.propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.number.isRequired,
-  img: PropTypes.object.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  style: PropTypes.object,
+};
+
+Ticket.defaultProps = {
+  style: {},
 };
 
 export default Ticket;

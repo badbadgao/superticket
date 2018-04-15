@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
+import { map } from 'lodash';
+
 import { fetchMovies } from 'reducers/movies/actions';
 
 import Ticket from './Ticket';
@@ -10,28 +12,34 @@ import Ticket from './Ticket';
 class Tickets extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     props.actions.fetchMovies();
-    console.log('getmovies in constructor');
   }
 
-  // componentDidMount() {
-  //   console.log('getmovies in componentDidMount');
-  //   this.props.actions.fetchMovies();
-  // }
-
   render() {
-    console.log(this.props.data);
-    const TicketsComponents = this.props.data.data.map(movie => (
+    const style = {
+      container: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        padding: '16px 8px',
+      },
+      ticket: {
+        marginLeft: '8px',
+      },
+    };
+
+    const TicketsComponents = map(this.props.data.data, movie => (
       <Ticket
+        key={movie.id}
         title={movie.name}
-        subtitle={movie.star}
+        subtitle={`评分 ${movie.star}`}
         img={movie.img}
+        style={style.ticket}
       />
     ));
     return (
-      <div>
-        <TicketsComponents />
+      <div style={style.container}>
+        {TicketsComponents}
       </div>
     );
   }
@@ -49,7 +57,11 @@ const mapDispatchToProps = dispatch => ({
 
 Tickets.propTypes = {
   actions: PropTypes.object.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object,
+};
+
+Tickets.defaultProps = {
+  data: {},
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Tickets);

@@ -14,7 +14,7 @@ const style = {
   },
 };
 const CardM = props => (
-  <div>
+  <div style={props.style}>
     <CardMedia
       mediaStyle={style.cardMedia}
       overlayContainerStyle={style.overlayContainerStyle}
@@ -32,10 +32,12 @@ CardM.propTypes = {
   alt: PropTypes.string,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
+  style: PropTypes.object,
 };
 
 CardM.defaultProps = {
   alt: '',
+  style: {},
 };
 
 export default CardM;

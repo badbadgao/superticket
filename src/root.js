@@ -9,9 +9,11 @@ import Root from './containers/Root';
 import appReducers from './reducers/';
 
 const middleware = [thunk];
-if (process.env.NODE_ENV !== 'production') {
-  middleware.push(createLogger());
-}
+// if (process.env.NODE_ENV === 'production') {
+//   middleware.push(createLogger());
+// }
+
+middleware.push(createLogger());
 
 const store = createStore(
   appReducers,

@@ -18,12 +18,6 @@ const BackGroudCard = () => {
       borderTopRightRadius: '4px',
       borderTopLeftRadius: '4px',
     },
-    productsContainer: {
-      display: 'flex',
-      justifyContent: 'space-around',
-      alignItems: 'center',
-      padding: '16px 8px',
-    },
   };
 
   return (
@@ -34,9 +28,7 @@ const BackGroudCard = () => {
           style={style.cardHeader}
           title="Movie"
         />
-        <div style={style.productsContainer}>
-          <Tickets />
-        </div>
+        <Tickets />
       </Card>
     </div>
   );
