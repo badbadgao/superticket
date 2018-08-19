@@ -7,7 +7,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx', '.css'],
     modules: [
       path.resolve('./src'),
-      path.resolve('./src/App/'),
+      path.resolve('./src/App'),
       path.resolve('./node_modules')
     ],
   },
@@ -22,6 +22,10 @@ module.exports = {
           plugins: ['transform-object-rest-spread', 'transform-class-properties']
         },
       },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      },    
       {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ]

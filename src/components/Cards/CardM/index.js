@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { CardMedia, CardTitle } from 'material-ui';
 
 const style = {
+  container: {
+    border: '5px solid #af959b',
+  },
   cardMedia: {
     width: '200px',
   },
@@ -14,7 +17,7 @@ const style = {
   },
 };
 const CardM = props => (
-  <div style={props.style}>
+  <div style={{ ...style.container, ...props.style }}>
     <CardMedia
       mediaStyle={style.cardMedia}
       overlayContainerStyle={style.overlayContainerStyle}

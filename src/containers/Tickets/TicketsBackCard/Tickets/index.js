@@ -32,7 +32,7 @@ class Tickets extends React.Component {
       <Ticket
         key={movie.id}
         title={movie.name}
-        subtitle={`评分 ${movie.star}`}
+        // subtitle={`评分 ${movie.star}`}
         img={movie.img}
         style={style.ticket}
       />
